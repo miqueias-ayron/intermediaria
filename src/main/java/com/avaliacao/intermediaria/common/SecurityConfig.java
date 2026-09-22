@@ -20,7 +20,7 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST, "/usuarios").permitAll()
-                        //.requestMatchers(HttpMethod.GET, "/MUDE_A_ROTA").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/quartos").permitAll()
                         .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults())
